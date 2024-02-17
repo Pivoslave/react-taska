@@ -1,0 +1,33 @@
+.add-note{
+    width: 100%;
+}
+
+.add-note.hidden{
+    display: none;
+}
+
+.add-note > input{
+    width: calc(100% - 2px - 1.4rem);
+    margin-bottom: 1rem;
+    border: 1px solid black;
+    padding: 0.5rem 0.7rem;
+}
+
+.add-note > div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-note > div > button{
+    padding: 0.3rem 0.6rem;
+    border-radius: 15px;
+    border: 1px solid transparent;
+    background-color: darkgreen;
+    color: white;
+    font-size: 0.9vw;
+    margin-bottom: 1.5rem;
+}
+
+.add-note > div > button + button{
+    background-color: darkred;
+}

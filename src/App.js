@@ -1,23 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from "./components/header";
+import Wrapper from "./components/wrapper";
+import {useState} from "react";
+
 
 function App() {
+
+    const[notes, noteHook] = useState([{'active': true, 'text': 'a', 'date': new Date().toLocaleString(), 'id': 0}]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div style={{paddingLeft: '30vw', paddingRight: '30vw'}}>
+      <Header hook={noteHook} notes={notes}></Header>
+      <Wrapper notes={notes} hook={noteHook}></Wrapper>
     </div>
   );
 }

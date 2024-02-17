@@ -1,0 +1,78 @@
+.list-wrapper{
+    background-color: darkgray;
+    padding: 0.5rem 0.6rem;
+}
+
+.list-wrapper > .note{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.list-wrapper > .note > .note-text{
+    padding: 0.7rem 1.6rem 0.7rem 1.4rem;
+    width: calc(100% - 6% - 5% - 1.6rem - 1.4rem);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+
+.list-wrapper > .note h4{
+    font-size: 1vw;
+    margin: 5px;
+}
+
+.list-wrapper > .note h4 + h4{
+    color: rgba(40, 40, 40, 1);
+    font-size: 0.6vw;
+}
+
+.list-wrapper > .note.checked h4{
+    text-decoration: line-through black;
+}
+
+.list-wrapper > .note > .checkmark{
+    position: relative;
+    width: 5%;
+    display: flex;
+    cursor: pointer;
+}
+
+.list-wrapper > .note > .checkmark > img {
+    background-color: black;
+    width: 100%;
+    aspect-ratio: 1/1;
+    align-self: center;
+}
+
+.list-wrapper > .note.checked > .checkmark > img{
+    display: none;
+}
+
+.list-wrapper > .note > .checkmark > img + img{
+    display: none;
+    background: darkblue;
+    width: 100%;
+    aspect-ratio: 1/1;
+    align-self: center;
+}
+
+.list-wrapper > .note.checked > .checkmark > img + img{
+    display: block;
+    visibility: visible;
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+
+.list-wrapper > .note > div.note-text + div{
+    width: 6%;
+    display: flex;
+}
+
+.list-wrapper > .note > div.note-text+div > img {
+    width: 100%;
+    align-self: center;
+    background-color: lightgray;
+    padding: 6px;
+    border-radius: 15px;
+}
